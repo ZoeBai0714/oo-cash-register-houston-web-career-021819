@@ -5,7 +5,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @titles = []
-    @items = {:title =>"", :price => "", :quantity => ""}
+    @items = {:title =>[], :price => [], :quantity => []}
   end
   
   def total
@@ -38,5 +38,6 @@ class CashRegister
   end
   
   def void_last_transaction
+    
   end
 end
