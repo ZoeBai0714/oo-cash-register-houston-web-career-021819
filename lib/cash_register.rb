@@ -4,8 +4,7 @@ class CashRegister
   def initialize(discount=0)
     @total = 0
     @discount = discount
-    @titles = []
-    @items = {:title =>[], :price => [], :quantity => []}
+    @items = []
   end
   
   def total
