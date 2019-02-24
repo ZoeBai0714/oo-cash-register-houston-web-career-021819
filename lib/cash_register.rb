@@ -13,12 +13,9 @@ class CashRegister
   
   def add_item(title, price, quantity=1)
     @total += price * quantity
-    @items[:title] = title
-    @items[:price] = price
-    @items[:quantity] = quantity
     
     quantity.times do
-      @titles << title
+      @items << title
     end
     
   end
@@ -33,7 +30,7 @@ class CashRegister
   end
   
   def items
-    @titles
+    @items
   end
   
   def void_last_transaction
