@@ -4,7 +4,7 @@ class CashRegister
   def initialize(discount=0)
     @total = 0
     @discount = discount
-    @all_items = []
+    #@all_items = []
     @items = {:title =>"", :price => "", :quantity => ""}
   end
   
@@ -17,9 +17,12 @@ class CashRegister
     @items[:title] = title
     @items[:price] = price
     @items[:quantity] = quantity
-    quantity.times do
-      @items << title
+    @items.collect do |item|
+      item[:title]
     end
+    #quantity.times do
+     # @items << title
+    #end
     
   end
   
